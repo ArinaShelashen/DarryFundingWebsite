@@ -230,11 +230,13 @@
         <div class="photo-grid">
 
             <div class="photo-frame">
-                <span>📷<br>[ Фото кролика ]</span>
+               <img src="images/Darry_before.png" alt="Дарри до операции">
+                <span class="photo-caption">До первой операции</span>
             </div>
 
             <div class="photo-frame">
-                <span>🏥<br>[ Фото из клиники ]</span>
+                <img src="images/Darry_after.png" alt="Дарри после операции">
+                <span class="photo-caption">Одно ушко уже починили</span>
             </div>
 
         </div>
@@ -247,7 +249,7 @@
 
                 <div class="progress-label">
                     <span>Собрано</span>
-                    <span>€0 / €700</span>
+                    <span>€0 / €800</span>
                 </div>
 
                 <div class="progress-bar">
@@ -401,21 +403,30 @@
         <div class="payment-content">
 
             <p>
-                Если вам удобно перевести деньги с белорусской карты,
-                можно воспользоваться ЕРИП.
+                Если вам удобно перевести деньги с беларуской карты,
+                можно воспользоваться ЕРИП (без комиссии).
             </p>
+            <div class="account-box">
 
-            <strong>Как оплатить:</strong>
+                <div>
+                    <span>Откройте приложение вашего банка.<br>
+                     Выберите Платежи/Система "Расчёт" - ЕРИП и найдите нужный раздел:</span>
+                </div>
+                <div>
+                    <span>ЕРИП<br>Банковские, финансовые услуги<br>Банки, НКФО<br>
+                        БСБ Банк<br>Пополнение счёта<br>Введите номер IBAN</span>
+                </div>
 
-            <ol>
-                <li>Откройте приложение вашего банка.</li>
-                <li>Выберите ЕРИП и найдите нужный раздел.</li>
-                <li>Введите данные из инструкции ниже.</li>
-            </ol>
+             <strong id="iban-by">
+                BY28UNBS30141566027563050978
+            </strong>
 
-            <div class="fill-block">
-                [ Здесь будет схема оплаты через ЕРИП ]
-            </div>
+            <button
+                type="button"
+                class="copy-button"
+                onclick="copyIBAN('iban-by', this)">
+                Скопировать IBAN
+            </button>
 
         </div>
 
@@ -441,12 +452,12 @@
         <div class="payment-content">
 
             <p>
-                Можно отправить любую комфортную сумму через PayPal.
+                Можно отправить через PayPal для Друзей и семьи (Friends & Family) по никнейму:
             </p>
 
             <div class="account-box">
                 <span>PayPal</span>
-                <strong>[ ваш email ]</strong>
+                <a href="https://www.paypal.me/ArinaShelashen" target="_blank"><strong>@ArinaShelashen</strong></a>
             </div>
 
         </div>
@@ -479,7 +490,7 @@
 
             <div class="account-box">
                 <span>Wise account</span>
-                <strong>[ реквизиты ]</strong>
+                <a href="https://wise.com/pay/me/arinas202" target="_blank"><strong>@arinas202</strong></a>
             </div>
 
         </div>
@@ -514,17 +525,24 @@
 
                 <div>
                     <span>Имя получателя</span>
-                    <strong>[ NAME ]</strong>
+                    <strong>Arina Shelashen</strong>
                 </div>
 
                 <div>
                     <span>IBAN</span>
-                    <strong>[ DE00 0000 0000 0000 0000 00 ]</strong>
+                    <strong id="iban-de">DE84850503001228645988</strong>
+
+                    <button
+                        type="button"
+                        class="copy-button"
+                        onclick="copyIBAN('iban-de', this)">
+                        Копировать
+                    </button>
                 </div>
 
                 <div>
                     <span>BIC</span>
-                    <strong>[ BIC ]</strong>
+                    <strong>OSDDDE81XXX</strong>
                 </div>
 
             </div>
@@ -662,7 +680,10 @@
         <p style="text-align:center; color:var(--text-muted);">
         Вы помогаете Дарри пройти через операцию — а он хочет отблагодарить вас!<br>
         Мы приготовили несколько подарков на выбор — выбирайте тот, который вам понравится,
-            и получайте немного ушастой благодарности :)
+            и получайте немного ушастой благодарности :)<br><br>
+            P.S. Границы донатов обусловлены ценой доставки.<br><br>
+
+            P.P.S. Физические подарочки дойдут в Беларусь с задержкой!
 
         </p>
 
@@ -674,13 +695,12 @@
 
         <summary>
             <div class="gift-card-title">
-                <img src="icons/postcard.svg"
+                <img src="icons/digital-card.svg"
                      alt=""
                      class="gift-icon">
 
                 <div>
-                    <h3>Цифровая открытка</h3>
-                    <span>Маленькая открытка лично от Дарри</span>
+                    <h3>Цифровая открытка (донат от 0.1€)</h3>
                 </div>
             </div>
 
@@ -688,10 +708,6 @@
         </summary>
 
         <div class="gift-content">
-
-            <img src="images/gift-postcard.jpg"
-                 alt="Пример цифровой открытки"
-                 class="gift-photo">
 
             <p>
                 Красочная цифровая открытка с Дарри,
@@ -709,13 +725,12 @@
         <summary>
             <div class="gift-card-title">
 
-                <img src="icons/instagram.svg"
+                <img src="icons/telegram.svg"
                      alt=""
                      class="gift-icon">
 
                 <div>
-                    <h3>Привет от Дарри</h3>
-                    <span>Упоминание в сторис</span>
+                    <h3>Стикеры в Telegram (донат от 0.1€)</h3>
                 </div>
 
             </div>
@@ -724,15 +739,7 @@
         </summary>
 
         <div class="gift-content">
-
-            <img src="images/gift-story.jpg"
-                 alt="Пример сторис"
-                 class="gift-photo">
-
-            <p>
-                Дарри лично передаст вам привет
-                в нашей истории в Instagram.
-            </p>
+            <p>Набор стикеров в Telegram с Монстрой и Дарри на все случаи жизни</p>
 
         </div>
 
@@ -745,13 +752,12 @@
         <summary>
             <div class="gift-card-title">
 
-                <img src="icons/photo.svg"
+                <img src="icons/postcard.svg"
                      alt=""
                      class="gift-icon">
 
                 <div>
-                    <h3>Фото с приветом</h3>
-                    <span>Персональное фото от Дарри</span>
+                    <h3>Бумажная открытка от Дарри (донат от 6€)</h3>
                 </div>
 
             </div>
@@ -761,13 +767,8 @@
 
         <div class="gift-content">
 
-            <img src="images/gift-photo.jpg"
-                 alt="Фото Дарри"
-                 class="gift-photo">
-
-            <p>
-                Получите фотографию Дарри с вашим
-                персональным приветом.
+            <p>Настоящая бумажная открытка с маркой из Германии от Дарри персонально вам!
+                 Не забудьте сообщить ваш почтовый адрес
             </p>
 
         </div>
@@ -781,13 +782,12 @@
         <summary>
             <div class="gift-card-title">
 
-                <img src="icons/surprise.svg"
+                <img src="icons/sticker.svg"
                      alt=""
                      class="gift-icon">
 
                 <div>
-                    <h3>Маленький сюрприз</h3>
-                    <span>Что-нибудь особенное</span>
+                    <h3>Бумажные стикеры от Дарри (донат от 8€)</h3>
                 </div>
 
             </div>
@@ -797,13 +797,70 @@
 
         <div class="gift-content">
 
-            <img src="images/gift-surprise.jpg"
-                 alt="Маленький сюрприз"
-                 class="gift-photo">
+
+            <p>Набор бумажных стикеров с Дарри и Монстрой (8 шт, диаметр 4 см).
+                Не забудьте сообщить ваш почтовый адрес!
+            </p>
+
+        </div>
+
+    </details>
+
+     <!-- Подарок 5 -->
+    <details class="gift-card">
+
+        <summary>
+            <div class="gift-card-title">
+
+                <img src="icons/rabbit-key.svg"
+                     alt=""
+                     class="gift-icon">
+
+                <div>
+                    <h3>Брелок с шерстью Дарри (донат от 10€)</h3>
+                </div>
+
+            </div>
+
+            <span class="gift-arrow">⌄</span>
+        </summary>
+
+        <div class="gift-content">
+
 
             <p>
-                Тут пока секрет. Но Дарри обещает,
-                что будет мило :)
+                Вы пожертвовали денежку, а Дарри - немножко шерсти, чтобы у вас был милый брелок в виде кролика с его частичкой <3
+            </p>
+
+        </div>
+
+    </details>
+
+         <!-- Подарок 6 -->
+    <details class="gift-card">
+
+        <summary>
+            <div class="gift-card-title">
+
+                <img src="icons/cup.svg"
+                     alt=""
+                     class="gift-icon">
+
+                <div>
+                    <h3>Подставка под кружку в виде кролика (донат от 10€)</h3>
+                </div>
+
+            </div>
+
+            <span class="gift-arrow">⌄</span>
+        </summary>
+
+        <div class="gift-content">
+
+
+            <p>
+                Вязаная подставка под кружку/тарелку в виде кролика (вероятно с частичками его шерсти).
+                Размер и цвет можно выбрать :)
             </p>
 
         </div>
@@ -927,9 +984,17 @@
 
     <div class="story-content">
         <p>
-            [ Здесь коротко рассказываем, когда начались проблемы,
-            что показали обследования, почему потребовалась операция
-            и почему теперь необходимо оперировать второе ухо. ]
+            <strong>Дисклеймер: мы НЕ покупали кролика, а брали из приюта единственно доступного мальчика для нашей крольчихи Монстры. </strong>
+                <img src="images/ear-example.jpg"
+                 alt="Счёт из ветеринарной клиники"
+                 class="ear-image">
+            Чтобы вывести кроликов с милыми висячими ушками, селекционеры закрепили особенности строения их ушей.
+            Из-за этого хрящи и косточки в ушке могут быть сильнее согнуты, а слуховой проход — сужен (на картинке ушко справа).
+            У некоторых кроликов это приводит к тому, что ухо хуже вентилируется, внутри скапливается воспаление и со временем могут
+            начаться более серьёзные проблемы.<br>
+            Мы пробовали лечение каплями. К сожалению, нам не помогло. Поэтому пришлось прибегнуть к операции, чтобы увеличить слуховой
+            проход (на картинке ушко справа). Делать это пришлось как можно скорее, т.к. ушки выглядели не очень, а в левом уже начала
+            скапливаться жидкость.
         </p>
     </div>
 </details>
@@ -948,23 +1013,39 @@
     </summary>
 
     <div class="story-content">
-
+        <p>
+            Здесь наши счета за первую операцию.<br>Красным обозначены финальные суммы,
+            голубым - то, что для второй операции не понадобится.
+        </p>
         <div class="document-grid">
 
-            <img src="images/invoice-1.jpg"
+            <img src="images/doc1.png"
                  alt="Счёт из ветеринарной клиники"
                  class="document-image">
 
-            <img src="images/invoice-2.jpg"
+            <img src="images/doc2.png"
+                 alt="Счёт из ветеринарной клиники"
+                 class="document-image">
+
+            <img src="images/doc3.png"
+                 alt="Счёт из ветеринарной клиники"
+                 class="document-image">
+
+            <img src="images/doc4.png"
+                 alt="Счёт из ветеринарной клиники"
+                 class="document-image">
+
+            <img src="images/doc5.png"
+                 alt="Счёт из ветеринарной клиники"
+                 class="document-image">
+
+            <img src="images/doc6.png"
                  alt="Счёт из ветеринарной клиники"
                  class="document-image">
 
         </div>
 
-        <p>
-            Здесь можно добавить короткое пояснение,
-            что именно было оплачено.
-        </p>
+
 
     </div>
 </details>
@@ -988,12 +1069,11 @@
             <strong>⚠️ Осторожно, фото может быть неприятным</strong>
 
             <p>
-                Здесь находится фотография уха Дарри после первой операции.
-                Открывайте только если хотите увидеть результат лечения.
+                Из-за отека на фото не видно, но в самом жутком месте находится новое отверстие для ушка Даррика.
             </p>
         </div>
 
-        <img src="images/ear-after-surgery.jpg"
+        <img src="images/Darry_wound.png"
              alt="Ухо Дарри после операции"
              class="sensitive-photo">
 
@@ -1004,7 +1084,7 @@
 
     <span>Стоимость второй операции</span>
 
-    <strong>≈ 700 €</strong>
+    <strong>≈ 800 €</strong>
 
 </div>
 
@@ -1029,6 +1109,20 @@
         </p>
     </div>
 </footer>
+<script>
+function copyIBAN(elementId, button) {
+    const iban = document.getElementById(elementId).textContent
+        .replace(/\s/g, '');
 
+    navigator.clipboard.writeText(iban);
+
+    const originalText = button.textContent;
+    button.textContent = 'Скопировано!';
+
+    setTimeout(() => {
+        button.textContent = originalText;
+    }, 1800);
+}
+</script>
 </body>
 </html>
