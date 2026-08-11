@@ -477,6 +477,12 @@ section {
     .photo-frame img {
         max-width: 260px;
     }
+    
+    .photo-caption {
+        bottom: 8px;
+        font-size: .8rem;
+    }
+
 
 }
 /* =========================
