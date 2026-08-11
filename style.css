@@ -467,7 +467,18 @@ section {
 .photo-frame:nth-child(2) .photo-caption {
     transform: rotate(1deg);
 }
+@media (max-width: 700px) {
 
+    .photo-frame {
+        width: 75%;
+        max-width: 300px;
+    }
+
+    .photo-frame img {
+        max-width: 260px;
+    }
+
+}
 /* =========================
    PLACEHOLDER / INFO BLOCK
 ========================= */
