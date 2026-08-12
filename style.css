@@ -470,19 +470,25 @@ section {
 @media (max-width: 700px) {
 
     .photo-frame {
-        width: 75%;
-        max-width: 300px;
+        width: 90%;
+        max-width: 380px;
+        padding: 7px 7px 42px;
     }
 
     .photo-frame img {
-        max-width: 260px;
-    }
-    
-    .photo-caption {
-        bottom: 8px;
-        font-size: .8rem;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        display: block;
     }
 
+    .photo-caption {
+        left: 8px;
+        right: 8px;
+        bottom: 10px;
+        font-size: .8rem;
+        line-height: 1.2;
+    }
 
 }
 /* =========================
